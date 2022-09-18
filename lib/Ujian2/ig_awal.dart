@@ -48,7 +48,7 @@ class _IGAwalState extends State<IGAwal> {
         ),
         
         Container(
-          height: 135,
+          height: 90,
           child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
@@ -62,6 +62,7 @@ class _IGAwalState extends State<IGAwal> {
             ],
           ),
         ),
+        Divider(height: 1, thickness: 1),
 
         itemFoto(urlPanda, nama[0]),
         itemFoto(urlPanda, nama[1]),
@@ -75,12 +76,12 @@ class _IGAwalState extends State<IGAwal> {
 
 Padding fotoKecil (String url, String nama){
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 10),
+    padding: const EdgeInsets.symmetric(horizontal: 8),
     child: Column(
       children: [
         Container(
-          width: 80,
-          height: 80,
+          width: 60,
+          height: 60,
           clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100)
@@ -88,7 +89,7 @@ Padding fotoKecil (String url, String nama){
           child: Image.network(url,
             fit: BoxFit.cover,),
         ),
-        SizedBox(height: 5,),
+        SizedBox(height: 5),
         Text(nama)
       ],
     ),
@@ -109,9 +110,10 @@ Column itemFoto(String url, String nama){
                   padding: const EdgeInsets.symmetric(horizontal: 7),
                   child: Column(
                     children: [
+                      SizedBox(height: 10,),
                       Container(
-                        width: 45,
-                        height: 45,
+                        width: 40,
+                        height: 40,
                         clipBehavior: Clip.antiAlias,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(100)
@@ -119,7 +121,7 @@ Column itemFoto(String url, String nama){
                         child: Image.network(url,
                           fit: BoxFit.cover,),
                       ),
-                      SizedBox(height: 5,),
+                      SizedBox(height: 10,),
                     ],
                   ),
                 ),
